@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="513.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.embassy_operations_simulation.Citizen.ApplyForPassportRenewal">
+   <children>
+      <Label fx:id="passportRenewalLabel" layoutX="210.0" layoutY="26.0" prefHeight="34.0" prefWidth="220.0" text="Passport Renewal Application">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fullNameTextField" layoutX="103.0" layoutY="131.0" onAction="#handelfullName" prefHeight="25.0" prefWidth="264.0" />
+      <TextField fx:id="passportNOTextField" layoutX="140.0" layoutY="178.0" onAction="#handelPassportNumber" prefHeight="25.0" prefWidth="230.0" />
+      <Text fx:id="fullNameText" layoutX="28.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name:" wrappingWidth="74.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="passportNOTextField" layoutX="22.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passport Number:" wrappingWidth="127.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="expiryDateDatePicker" layoutX="108.0" layoutY="232.0" onAction="#handelExpiryDate" />
+      <Text fx:id="expiryDateTextField" layoutX="21.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expiry Date :" wrappingWidth="87.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Button fx:id="uploadPhotoButton" layoutX="46.0" layoutY="293.0" mnemonicParsing="false" onAction="#handelUploadPhoto" prefHeight="25.0" prefWidth="164.0" text="Upload Photo" />
+      <Button fx:id="uploadDocsButton" layoutX="51.0" layoutY="358.0" mnemonicParsing="false" onAction="#handelUploadDocuments" prefHeight="25.0" prefWidth="164.0" text="Upload Documents" />
+      <Button fx:id="submitButton" layoutX="51.0" layoutY="414.0" mnemonicParsing="false" onAction="#handelSubmitApplication" prefHeight="25.0" prefWidth="164.0" text="Submit Application" />
+   </children>
+</AnchorPane>

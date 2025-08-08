@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="533.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.embassy_operations_simulation.Visitor.VisitorDashboard">
+   <children>
+      <VBox layoutX="120.0" layoutY="37.0" prefHeight="469.0" prefWidth="291.0">
+         <children>
+            <Label prefHeight="23.0" prefWidth="291.0" text="Welcome ">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Button fx:id="applyVisaButton" mnemonicParsing="false" onAction="#applyVisaOnAction" prefHeight="25.0" prefWidth="300.0" text="Apply for Visa">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="appointmentBookButton" mnemonicParsing="false" onAction="#bookAppointmentOnAction" prefHeight="25.0" prefWidth="324.0" text="Book Visa Appointment">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="submitDocsButton" mnemonicParsing="false" onAction="#submitdocsOnAction" prefHeight="25.0" prefWidth="320.0" text="Submit Additional Documents">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="trackApplicationButton" mnemonicParsing="false" onAction="#trackApplicationOnAction" prefHeight="25.0" prefWidth="328.0" text="Track Visa Application">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="downloadApplicationButton" mnemonicParsing="false" onAction="#DounloadApplicationOnAction" prefHeight="25.0" prefWidth="316.0" text="Download Visa Application">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="askQuestionButton" mnemonicParsing="false" onAction="#askQuestionOnAction" prefHeight="25.0" prefWidth="308.0" text="Ask Visa Related Question">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="urgentProcessingButton" mnemonicParsing="false" onAction="#urgentProcessingOnAction" prefHeight="25.0" prefWidth="329.0" text="Request Urgent Processing">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="cancelApplicationButton" mnemonicParsing="false" onAction="#cancelApplicationOnAction" prefHeight="25.0" prefWidth="339.0" text="Cancel/Withdraw Visa Application">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
