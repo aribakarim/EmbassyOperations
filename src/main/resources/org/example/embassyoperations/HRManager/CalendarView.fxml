@@ -4,25 +4,37 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.HRManager.CalendarViewController">
    <children>
-      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" text="Back" />
-      <TableView layoutX="20.0" layoutY="118.0" prefHeight="232.0" prefWidth="554.0">
+      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+      <TableView fx:id="calendartableView" layoutX="20.0" layoutY="59.0" prefHeight="171.0" prefWidth="554.0">
          <columns>
-            <TableColumn prefWidth="106.39996337890625" text="Date" />
-            <TableColumn prefWidth="143.20001220703125" text="Title" />
-            <TableColumn prefWidth="152.0" text="Time" />
-            <TableColumn prefWidth="151.20001220703125" text="Button" />
+            <TableColumn fx:id="slNoCol" prefWidth="68.79998779296875" text="SL No" />
+            <TableColumn fx:id="eventCol" prefWidth="183.20001220703125" text="Event" />
+            <TableColumn fx:id="timeCol" prefWidth="152.0" text="Time" />
+            <TableColumn fx:id="dateCol" prefWidth="151.20001220703125" text="Date" />
          </columns>
       </TableView>
-      <Button layoutX="38.0" layoutY="368.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="518.0" text="Add New Event" />
-      <Label layoutX="269.0" layoutY="35.0" text="Calendar">
+      <Button layoutX="99.0" layoutY="250.0" mnemonicParsing="false" onAction="#addNewEventButtonOnAction" prefHeight="26.0" prefWidth="153.0" text="Add New Event" />
+      <Label layoutX="268.0" layoutY="21.0" text="Calendar">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <Line endX="436.5999755859375" layoutX="133.0" layoutY="306.0" startX="-100.0" />
+      <Label layoutX="14.0" layoutY="346.0" text="Enter SL No to See details/Delete: ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="slNoTextField" layoutX="253.0" layoutY="343.0" prefHeight="26.0" prefWidth="73.0" />
+      <Button layoutX="365.0" layoutY="343.0" mnemonicParsing="false" onAction="#seeButtonOnAction" prefHeight="26.0" prefWidth="82.0" text="See details" />
+      <Button layoutX="472.0" layoutY="343.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="26.0" prefWidth="58.0" text="Delete" />
+      <Button layoutX="326.0" layoutY="250.0" mnemonicParsing="false" onAction="#refreshButtonOnAction" prefHeight="26.0" prefWidth="153.0" text="Refresh " />
    </children>
 </AnchorPane>

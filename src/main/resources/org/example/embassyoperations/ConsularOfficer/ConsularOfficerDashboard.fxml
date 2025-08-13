@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="consularOfficerDashboardBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.ConsularOfficer.ConsularOfficerDashboardController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -33,63 +33,65 @@
       </MenuBar>
    </top>
    <center>
-      <AnchorPane prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="500.0" prefWidth="600.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="526.0" prefWidth="198.0" spacing="20.0" style="-fx-background-color: #F5F5DC;">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Passport Applications" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="26.0" layoutY="260.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Emergency Requests" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="26.0" layoutY="284.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Applicants" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="26.0" layoutY="307.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Processed Applications" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="26.0" layoutY="329.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Calendar" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="26.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Apply for Leave" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="26.0" layoutY="376.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Notifications" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="26.0" layoutY="399.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Inquiries" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="26.0" layoutY="422.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Signout" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-            <Label layoutX="238.0" layoutY="97.0" prefHeight="122.0" prefWidth="498.0" style="-fx-border-color: gray;" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="outputLabel" layoutX="29.0" layoutY="66.0" prefHeight="122.0" prefWidth="498.0" style="-fx-border-color: white;" textAlignment="CENTER" wrapText="true">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
    </center>
+   <left>
+      <VBox alignment="CENTER" prefHeight="526.0" prefWidth="198.0" spacing="20.0" style="-fx-background-color: #F5F5DC;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#passportApplicationsButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Passport Applications" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="260.0" mnemonicParsing="false" onAction="#emergencyRequestsButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Emergency Requests" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="284.0" mnemonicParsing="false" onAction="#tasksButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Tasks" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="307.0" mnemonicParsing="false" onAction="#processedApplicationsButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Processed Applications" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="329.0" mnemonicParsing="false" onAction="#calendarButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Calendar" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="352.0" mnemonicParsing="false" onAction="#applyForLeaveButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Apply for Leave" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="376.0" mnemonicParsing="false" onAction="#notificationsButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Notifications" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="399.0" mnemonicParsing="false" onAction="#inquiresButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Inquiries" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="26.0" layoutY="422.0" mnemonicParsing="false" onAction="#singOutButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Signout" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
 </BorderPane>

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="hrManagerBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.HRManager.HRManagerDashboardController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -32,50 +32,57 @@
         </menus>
       </MenuBar>
    </top>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="outputLabel" layoutX="51.0" layoutY="89.0" prefHeight="122.0" prefWidth="498.0" style="-fx-border-color: white;" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </center>
    <left>
       <VBox alignment="CENTER" prefHeight="256.0" prefWidth="198.0" spacing="20.0" style="-fx-background-color: #F5F5DC;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Employee Directory" textAlignment="CENTER" wrapText="true">
+            <Button mnemonicParsing="false" onAction="#employeeDirectoryButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Employee Directory" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="26.0" layoutY="260.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Leave Requests" textAlignment="CENTER" wrapText="true">
+            <Button layoutX="26.0" layoutY="260.0" mnemonicParsing="false" onAction="#leaveRequestsButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Leave Requests" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="26.0" layoutY="283.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Send Announcement" textAlignment="CENTER" wrapText="true">
+            <Button layoutX="26.0" layoutY="283.0" mnemonicParsing="false" onAction="#sendAnnouncementButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Send Announcement" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="26.0" layoutY="305.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Assign Task" textAlignment="CENTER" wrapText="true">
+            <Button layoutX="26.0" layoutY="305.0" mnemonicParsing="false" onAction="#assignTaskButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Assign Task" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="26.0" layoutY="328.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Maintenance Request" textAlignment="CENTER" wrapText="true">
+            <Button layoutX="26.0" layoutY="328.0" mnemonicParsing="false" onAction="#maintenanceRequestButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Maintenance Request" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="26.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Calendar" textAlignment="CENTER" wrapText="true">
+            <Button layoutX="26.0" layoutY="352.0" mnemonicParsing="false" onAction="#calendarButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Calendar" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="26.0" layoutY="375.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Staff Activity Reports" textAlignment="CENTER" wrapText="true">
+            <Button layoutX="26.0" layoutY="375.0" mnemonicParsing="false" onAction="#staffActivityReportsButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Staff Activity Reports" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="26.0" layoutY="398.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="My Profile" textAlignment="CENTER" wrapText="true">
+            <Button layoutX="26.0" layoutY="398.0" mnemonicParsing="false" onAction="#myProfile" prefHeight="26.0" prefWidth="167.0" text="My Profile" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="26.0" layoutY="421.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Signout" textAlignment="CENTER" wrapText="true">
+            <Button layoutX="26.0" layoutY="421.0" mnemonicParsing="false" onAction="#signOutButtonOnAction" prefHeight="26.0" prefWidth="167.0" text="Signout" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -83,11 +90,4 @@
          </children>
       </VBox>
    </left>
-   <center>
-      <AnchorPane prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label layoutX="51.0" layoutY="89.0" prefHeight="122.0" prefWidth="498.0" style="-fx-border-color: gray;" textAlignment="CENTER" wrapText="true" />
-         </children>
-      </AnchorPane>
-   </center>
 </BorderPane>

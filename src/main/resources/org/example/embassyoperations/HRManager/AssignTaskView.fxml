@@ -8,33 +8,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.HRManager.AssignTaskController">
    <children>
-      <Label layoutX="67.0" layoutY="84.0" text="Designation">
+      <Label layoutX="46.0" layoutY="84.0" text="Designation">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="67.0" layoutY="141.0" text="Employee ">
+      <Label layoutX="46.0" layoutY="141.0" text="Employee ">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="64.0" layoutY="199.0" text="Due Date">
+      <Label layoutX="46.0" layoutY="199.0" text="Due Date">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="64.0" layoutY="264.0" text="Task Description">
+      <Label layoutX="46.0" layoutY="259.0" text="Task Description">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox layoutX="164.0" layoutY="81.0" prefHeight="26.0" prefWidth="325.0" />
-      <ComboBox layoutX="164.0" layoutY="138.0" prefHeight="26.0" prefWidth="326.0" />
-      <DatePicker layoutX="164.0" layoutY="196.0" prefHeight="26.0" prefWidth="166.0" />
-      <TextArea layoutX="184.0" layoutY="250.0" prefHeight="86.0" prefWidth="367.0" />
-      <Button layoutX="68.0" layoutY="402.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Asign Task" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" text="Back" />
+      <ComboBox fx:id="designationComboBox" layoutX="164.0" layoutY="81.0" onAction="#designationComboBoxOnAction" prefHeight="26.0" prefWidth="325.0" />
+      <ComboBox fx:id="employeeComboBox" layoutX="164.0" layoutY="138.0" prefHeight="26.0" prefWidth="326.0" />
+      <DatePicker fx:id="dueDateDatePicker" layoutX="164.0" layoutY="196.0" prefHeight="26.0" prefWidth="166.0" />
+      <TextArea fx:id="taskDescriptionTextArea" layoutX="164.0" layoutY="250.0" prefHeight="86.0" prefWidth="367.0" />
+      <Button layoutX="68.0" layoutY="402.0" mnemonicParsing="false" onAction="#assignTaskButtonOnAction" prefHeight="26.0" prefWidth="166.0" text="Asign Task" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

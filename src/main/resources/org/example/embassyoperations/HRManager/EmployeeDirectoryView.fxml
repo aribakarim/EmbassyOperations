@@ -3,24 +3,26 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.HRManager.EmployeeDirectoryViewController">
    <children>
-      <Label layoutX="68.0" layoutY="126.0" text="Designation">
+      <Label layoutX="30.0" layoutY="32.0" text="Designation">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="68.0" layoutY="183.0" text="Employee ">
+      <Label layoutX="30.0" layoutY="89.0" text="Employee ">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox layoutX="165.0" layoutY="123.0" prefHeight="26.0" prefWidth="325.0" />
-      <ComboBox layoutX="165.0" layoutY="180.0" prefHeight="26.0" prefWidth="326.0" />
-      <Button layoutX="223.0" layoutY="264.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="View Details" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" text="Back" />
+      <ComboBox fx:id="designationComboBox" layoutX="127.0" layoutY="29.0" onAction="#designationComboBoxOnAction" prefHeight="26.0" prefWidth="325.0" />
+      <ComboBox fx:id="employeeComboBox" layoutX="127.0" layoutY="86.0" prefHeight="26.0" prefWidth="326.0" />
+      <Button layoutX="85.0" layoutY="154.0" mnemonicParsing="false" onAction="#viewDetailsButtonOnAction" prefHeight="26.0" prefWidth="430.0" text="View Details" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+      <TextArea fx:id="outputTextArea" layoutX="34.0" layoutY="229.0" prefHeight="196.0" prefWidth="510.0" />
    </children>
 </AnchorPane>

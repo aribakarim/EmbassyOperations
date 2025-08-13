@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.HRManager.HomepageHRController">
+   <children>
+      <Label fx:id="outputLabel" layoutX="61.0" layoutY="99.0" prefHeight="122.0" prefWidth="498.0" style="-fx-border-color: white;" textAlignment="CENTER" wrapText="true" />
+   </children>
+</AnchorPane>

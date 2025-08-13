@@ -6,46 +6,64 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.HRManager.MyProfileViewController">
    <children>
-      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" text="Back" />
-      <Label layoutX="41.0" layoutY="80.0" text="Employee Name">
+      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+      <Label layoutX="50.0" layoutY="27.0" text="Employee Name">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="41.0" layoutY="127.0" text="Employee ID">
+      <Label layoutX="50.0" layoutY="74.0" text="Employee ID">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="41.0" layoutY="179.0" text="Designation">
+      <Label layoutX="50.0" layoutY="126.0" text="Designation">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="41.0" layoutY="223.0" text="Phone Number">
+      <Label layoutX="50.0" layoutY="223.0" text="Phone Number">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="41.0" layoutY="317.0" text="Address">
+      <Label layoutX="50.0" layoutY="380.0" text="Address">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="41.0" layoutY="273.0" text="Email">
+      <Label layoutX="50.0" layoutY="262.0" text="Email">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="175.0" layoutY="80.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
-      <Label layoutX="174.0" layoutY="127.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
-      <Label layoutX="174.0" layoutY="179.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
-      <Label layoutX="173.0" layoutY="223.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
-      <Label layoutX="173.0" layoutY="273.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
-      <TextArea layoutX="173.0" layoutY="317.0" prefHeight="70.0" prefWidth="322.0" />
-      <Button layoutX="45.0" layoutY="410.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" text="Edit" />
-      <Button layoutX="165.0" layoutY="410.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" text="Save Changes" />
+      <Label fx:id="employeeNameLabel" layoutX="184.0" layoutY="27.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
+      <Label fx:id="employeeIdLabel" layoutX="183.0" layoutY="74.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
+      <Label fx:id="designationLabel" layoutX="183.0" layoutY="126.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
+      <Label fx:id="phoneNoLabel" layoutX="182.0" layoutY="223.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
+      <Label fx:id="emailLabel" layoutX="182.0" layoutY="262.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
+      <TextArea fx:id="addressTextArea" layoutX="182.0" layoutY="380.0" prefHeight="26.0" prefWidth="247.0" />
+      <Button layoutX="17.0" layoutY="439.0" mnemonicParsing="false" onAction="#editButtonOnAction" prefHeight="26.0" prefWidth="173.0" text="Edit" />
+      <Label layoutX="50.0" layoutY="177.0" text="Date of Birth">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateOfBirthLabel" layoutX="183.0" layoutY="177.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
+      <Button layoutX="220.0" layoutY="440.0" mnemonicParsing="false" onAction="#refreshButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Refresh " />
+      <Label layoutX="50.0" layoutY="304.0" text="NID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nidLabel" layoutX="182.0" layoutY="304.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
+      <Label layoutX="50.0" layoutY="345.0" text="Password">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordLabel" layoutX="182.0" layoutY="345.0" prefHeight="20.0" prefWidth="247.0" style="-fx-border-color: gray;" />
    </children>
 </AnchorPane>

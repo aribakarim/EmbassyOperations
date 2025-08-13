@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.HRManager.AnnouncementViewController">
    <children>
-      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
       <Label layoutX="49.0" layoutY="80.0" text="Title">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -20,8 +20,8 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextArea layoutX="181.0" layoutY="139.0" prefHeight="76.0" prefWidth="350.0" />
-      <Button layoutX="53.0" layoutY="266.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="139.0" text="Send Announcement" />
-      <TextField layoutX="181.0" layoutY="77.0" prefHeight="26.0" prefWidth="335.0" />
+      <TextArea fx:id="messageTextArea" layoutX="181.0" layoutY="139.0" prefHeight="76.0" prefWidth="350.0" />
+      <Button layoutX="53.0" layoutY="266.0" mnemonicParsing="false" onAction="#sendAnnouncementButtonOnAction" prefHeight="26.0" prefWidth="139.0" text="Send Announcement" />
+      <TextField fx:id="titleTextField" layoutX="181.0" layoutY="77.0" prefHeight="26.0" prefWidth="335.0" />
    </children>
 </AnchorPane>
