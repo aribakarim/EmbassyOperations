@@ -12,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 import org.example.embassyoperations.ConsularOfficer.ConsularOfficer;
 import org.example.embassyoperations.ConsularOfficer.ConsularOfficerDashboardController;
+import org.example.embassyoperations.ConsularOfficer.LeaveRequest;
 import org.example.embassyoperations.HRManager.HRManager;
 import org.example.embassyoperations.HRManager.HRManagerDashboardController;
 
@@ -146,72 +147,35 @@ public class LoginViewController
 
     public ObservableList<HRManager> readHRManager(){
         ObservableList<HRManager> hrManagerList = FXCollections.observableArrayList();
-        FileInputStream fis = null;
-        ObjectInputStream ois = null;
-
+        File f = new File("HRManager.bin");
         try {
-            File f = new File("HRManager.bin");
-            HRManager hrManager;
-            if(f.exists()){
-                fis = new FileInputStream(f);
-            }
-            else{
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("File doesn't exist");
-                alert.showAndWait();
-            }
-            if(fis!=null){
-                ois = new ObjectInputStream(fis);
-            }
+            FileInputStream fis = new FileInputStream(f);
+            ObjectInputStream ois = new ObjectInputStream(fis);
             while(true){
-                hrManager = (HRManager) ois.readObject();
-                hrManagerList.add(hrManager);
+                HRManager hr = (HRManager) ois.readObject();
+                hrManagerList.add(hr);
             }
-        }catch (Exception e){
-            if(ois!=null) {
-                try {
-                    ois.close();
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-            }
+
+        }catch(Exception e){
+            //
         }
         return hrManagerList ;
     }
 
     public ObservableList<User> readUser(){
         ObservableList<User> userList = FXCollections.observableArrayList();
-        FileInputStream fis = null;
-        ObjectInputStream ois = null;
-
+        File f = new File("User.bin");
         try {
-            File f = new File("User.bin");
-            User user;
-            if(f.exists()){
-                fis = new FileInputStream(f);
-            }
-            else{
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("File doesn't exist");
-                alert.showAndWait();
-            }
-            if(fis!=null){
-                ois = new ObjectInputStream(fis);
-            }
+            FileInputStream fis = new FileInputStream(f);
+            ObjectInputStream ois = new ObjectInputStream(fis);
             while(true){
-                user = (User) ois.readObject();
+                User user = (User) ois.readObject();
                 userList.add(user);
             }
-        }catch (Exception e){
-            if(ois!=null) {
-                try {
-                    ois.close();
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-            }
-        }
-        return userList ;
-    }
 
+        }catch(Exception e){
+            //
+        }
+        return userList;
+    }
 }

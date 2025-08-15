@@ -76,11 +76,19 @@ public class AssignTaskController {
             alert.showAndWait();
             return;
         }
+        if (dueDateDatePicker.getValue().isBefore(LocalDate.now())) {
+            alert.setTitle("Invalid Due Date");
+            alert.setContentText("Due date cannot be before current date!");
+            alert.showAndWait();
+            return;
+        }
 
         String taskDescription = taskDescriptionTextArea.getText();
         LocalDate dueDate = dueDateDatePicker.getValue();
+        String e = employeeComboBox.getValue();
+        String[] parts = e.split("-");
 
-        Task newTask = new Task(loggedInOfficer.getId(), taskDescription, dueDate);
+        Task newTask = new Task(parts[1], taskDescription, dueDate);
         this.loggedInOfficer.assignTask(newTask);
         Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
         alert2.setTitle("Confirmation");

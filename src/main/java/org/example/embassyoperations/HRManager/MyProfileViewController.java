@@ -8,35 +8,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.example.embassyoperations.LoginViewController;
 import org.example.embassyoperations.MainApplication;
 import org.example.embassyoperations.User;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.LocalDate;
+import java.io.ObjectInputStream;
 
 public class MyProfileViewController
 {
-    @javafx.fxml.FXML
-    private Label dateOfBirthLabel;
-    @javafx.fxml.FXML
-    private Label phoneNoLabel;
-    @javafx.fxml.FXML
-    private Label employeeNameLabel;
-    @javafx.fxml.FXML
-    private Label employeeIdLabel;
-    @javafx.fxml.FXML
-    private TextArea addressTextArea;
-    @javafx.fxml.FXML
-    private Label designationLabel;
-    @javafx.fxml.FXML
-    private Label emailLabel;
 
     private HRManager loggedInOfficer;
     @javafx.fxml.FXML
-    private Label nidLabel;
-    @javafx.fxml.FXML
-    private Label passwordLabel;
+    private TextArea profileInfoTextArea;
 
     void setLoggedInOfficer(HRManager officer){
         this.loggedInOfficer = officer;
@@ -62,7 +47,7 @@ public class MyProfileViewController
             Stage stage = new Stage();
             stage.setTitle("Edit Profile");
             stage.setScene(scene);
-            EditProfileViewViewController controller = fxmlLoader.getController();
+            EditProfileViewController controller = fxmlLoader.getController();
             controller.setLoggedInOfficer(this.loggedInOfficer);
             controller.setEmployeeID(this.loggedInOfficer);
             stage.show();
@@ -72,31 +57,32 @@ public class MyProfileViewController
     }
 
     @javafx.fxml.FXML
-    public void refreshButtonOnAction(ActionEvent actionEvent) {
-        employee.clear();
-        LoginViewController controller = new LoginViewController();
-        employee.setAll(controller.readHRManager());
-        for(User hr: employee){
-            if(hr.getId().equals(loggedInOfficer.getId())){
-                employeeNameLabel.setText(hr.getName());
-                employeeIdLabel.setText(hr.getId());
-                designationLabel.setText(hr.getUsertype());
-                phoneNoLabel.setText(hr.getPhoneNo());
-                emailLabel.setText(hr.getEmail());
-                LocalDate date = hr.getDob();
-                dateOfBirthLabel.setText(date.toString());
-                nidLabel.setText(hr.getNid());
-                passwordLabel.setText(hr.getPassword());
-                addressTextArea.setText(hr.getAddress());
-            }
-        }
-    }
-
-    @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
         try {
             dashboard.setHomePage();
         } catch (IOException e) {
+            //
+        }
+    }
+
+    void setProfileInfo(HRManager hr){
+        profileInfoTextArea.setText(hr.toString());
+    }
+
+    @javafx.fxml.FXML
+    public void refreshButtonOnAction(ActionEvent actionEvent) {
+        File f = new File("User.bin");
+        try {
+            FileInputStream fis = new FileInputStream(f);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while(true){
+                User user = (User) ois.readObject();
+                if(user.getId().equals(this.loggedInOfficer.getId())){
+                    profileInfoTextArea.setText(user.toString());
+                }
+            }
+
+        }catch(Exception e){
             //
         }
     }

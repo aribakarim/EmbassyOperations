@@ -78,14 +78,12 @@ public class LeaveRequest implements Serializable{
 
     @Override
     public String toString() {
-        return "LeaveRequest{" +
-                "requestId='" + requestId + '\'' +
-                ", employeeId='" + employeeId + '\'' +
-                ", designation='" + designation + '\'' +
-                ", reason='" + reason + '\'' +
-                ", startDate=" + startDate +
-                ", endDate=" + endDate +
-                '}';
+        return "Request Id : " + requestId + '\n' +
+                "Employee Id : " + employeeId + '\n' +
+                "Designation : " + designation + '\n' +
+                "Reason : " + reason + '\n' +
+                "Start Date : " + startDate + '\n' +
+                "End Date : " + endDate ;
     }
 
     private String generateID(){
@@ -95,7 +93,7 @@ public class LeaveRequest implements Serializable{
         return str;
     }
 
-    static void writeLeaveRequest(LeaveRequest request){
+    public static void writeLeaveRequest(LeaveRequest request){
         File f = new File("LeaveRequestInfo.bin");
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;

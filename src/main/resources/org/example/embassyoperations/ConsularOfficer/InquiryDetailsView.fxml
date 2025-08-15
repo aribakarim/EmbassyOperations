@@ -6,39 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.ConsularOfficer.InquiryDetailsViewController">
    <children>
-      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" text="Back" />
-      <Label layoutX="59.0" layoutY="80.0" text="Inquiry ID">
+      <Label layoutX="59.0" layoutY="295.0" text="Response">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="180.0" layoutY="80.0" prefHeight="20.0" prefWidth="194.0" style="-fx-border-color: gray;" />
-      <Label layoutX="59.0" layoutY="144.0" text="Applicant ID">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="180.0" layoutY="144.0" prefHeight="20.0" prefWidth="194.0" style="-fx-border-color: gray;" />
-      <Label layoutX="59.0" layoutY="250.0" text="Inquiry Details">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="180.0" layoutY="250.0" prefHeight="54.0" prefWidth="338.0" style="-fx-border-color: gray;" wrapText="true" />
-      <Label layoutX="61.0" layoutY="347.0" text="Response">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="59.0" layoutY="201.0" text="Status">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="180.0" layoutY="201.0" prefHeight="20.0" prefWidth="184.0" style="-fx-border-color: gray;" />
-      <TextArea layoutX="180.0" layoutY="338.0" prefHeight="63.0" prefWidth="338.0" />
-      <Button layoutX="54.0" layoutY="428.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Submit Response" />
+      <TextArea fx:id="responseTextArea" layoutX="148.0" layoutY="283.0" prefHeight="63.0" prefWidth="338.0" />
+      <Button layoutX="178.0" layoutY="397.0" mnemonicParsing="false" onAction="#submitResponseButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Submit Response" />
+      <TextArea fx:id="inquiryDetailTextArea" layoutX="61.0" layoutY="75.0" prefHeight="166.0" prefWidth="454.0" />
    </children>
 </AnchorPane>

@@ -115,24 +115,5 @@ public abstract class User implements Serializable {
 
     public abstract User login(String id, String password);
 
-    public static boolean validatePassword(String password) {
-
-        for (int i = 0; i < password.length(); i++) {
-            if (!((password.charAt(i) >= '0' && password.charAt(i) <= '9') || (password.charAt(i) >= 'a' && password.charAt(i) <= 'z') || (password.charAt(i) >= 'A' && password.charAt(i) <= 'Z'))) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static boolean validateName(String name) {
-        name = name.trim();
-        for (int i = 0; i < name.length(); i++) {
-            if (!((name.charAt(i) == '.') || (name.charAt(i) >= 'a' && name.charAt(i) <= 'z') || (name.charAt(i) >= 'A' && name.charAt(i) <= 'Z'))) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
 

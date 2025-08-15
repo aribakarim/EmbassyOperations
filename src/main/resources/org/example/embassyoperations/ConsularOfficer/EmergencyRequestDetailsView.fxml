@@ -1,44 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.ConsularOfficer.EmergencyRequestsDetailsViewController">
    <children>
-      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" text="Back" />
-      <Label layoutX="59.0" layoutY="46.0" text="Name">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="203.0" layoutY="46.0" prefHeight="20.0" prefWidth="194.0" style="-fx-border-color: gray;" />
-      <Label layoutX="59.0" layoutY="144.0" text="Type of Emergency">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="203.0" layoutY="144.0" prefHeight="20.0" prefWidth="194.0" style="-fx-border-color: gray;" />
-      <Label layoutX="54.0" layoutY="239.0" text="Description">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="175.0" layoutY="239.0" prefHeight="54.0" prefWidth="338.0" style="-fx-border-color: gray;" wrapText="true" />
-      <Label layoutX="58.0" layoutY="191.0" text="Status">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="203.0" layoutY="191.0" prefHeight="20.0" prefWidth="184.0" style="-fx-border-color: gray;" />
-      <Button layoutX="35.0" layoutY="339.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="157.0" text="Mark as resolved" />
-      <Label layoutX="59.0" layoutY="94.0" text="Passport No">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="203.0" layoutY="94.0" prefHeight="20.0" prefWidth="194.0" style="-fx-border-color: gray;" />
-      <Button layoutX="221.0" layoutY="339.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="157.0" text="Request More Info" />
+      <TextArea fx:id="requestDetailsTextArea" layoutX="59.0" layoutY="78.0" prefHeight="264.0" prefWidth="486.0" />
    </children>
 </AnchorPane>

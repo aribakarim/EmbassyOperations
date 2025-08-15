@@ -4,24 +4,37 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.HRManager.LeaveRequestsViewController">
    <children>
-      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="531.0" layoutY="453.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
       <Label layoutX="28.0" layoutY="45.0" text="Leave Request Overview">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TableView layoutX="20.0" layoutY="118.0" prefHeight="292.0" prefWidth="562.0">
+      <TableView fx:id="leaveRequestTableView" layoutX="28.0" layoutY="88.0" prefHeight="190.0" prefWidth="530.0">
          <columns>
-            <TableColumn prefWidth="135.2000732421875" text="Employee ID" />
-            <TableColumn prefWidth="139.99993896484375" text="Designation" />
-            <TableColumn prefWidth="160.79998779296875" text="Status" />
-            <TableColumn prefWidth="124.80002441406248" text="Button" />
+            <TableColumn fx:id="applicationIdCol" prefWidth="121.5999755859375" text="Application ID" />
+            <TableColumn fx:id="employeeIdCol" prefWidth="147.199951171875" text="Employee ID" />
+            <TableColumn fx:id="designationCol" prefWidth="130.39996337890625" text="Designation" />
+            <TableColumn fx:id="statusCol" prefWidth="131.20001220703125" text="Status" />
          </columns>
       </TableView>
+      <Line endX="416.79998779296875" layoutX="118.0" layoutY="337.0" startX="-68.0" />
+      <Label layoutX="21.0" layoutY="366.0" text="Enter Application ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="enterApplicationIdTextField" layoutX="172.0" layoutY="363.0" prefHeight="26.0" prefWidth="127.0" />
+      <Button layoutX="331.0" layoutY="363.0" mnemonicParsing="false" onAction="#viewDetailsButtonOnAction" text="View Details" />
+      <Button layoutX="434.0" layoutY="363.0" mnemonicParsing="false" onAction="#approveButtonOnAction" text="Approve" />
+      <Button layoutX="509.0" layoutY="363.0" mnemonicParsing="false" onAction="#rejectButtonOnAction" prefHeight="26.0" prefWidth="70.0" text="Reject" />
+      <Button layoutX="169.0" layoutY="294.0" mnemonicParsing="false" onAction="#loadTableButtonOnAction" prefHeight="26.0" prefWidth="239.0" text="Load Table" />
    </children>
 </AnchorPane>

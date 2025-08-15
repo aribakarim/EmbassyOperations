@@ -54,12 +54,10 @@ public class Announcement implements Serializable {
 
     @Override
     public String toString() {
-        return "Announcement{" +
-                "announcementID='" + announcementID + '\'' +
-                ", message='" + message + '\'' +
-                ", title='" + title + '\'' +
-                ", date=" + date +
-                '}';
+        return  "Notification Id : " + announcementID + '\n' +
+                "Message : " + message + '\n' +
+                "Title : " + title + '\n' +
+                "Date : " + date ;
     }
 
     private String generateID(){

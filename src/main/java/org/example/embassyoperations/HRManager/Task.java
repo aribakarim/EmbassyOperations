@@ -63,13 +63,11 @@ public class Task implements Serializable {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "taskID='" + taskID + '\'' +
-                ", employeeID='" + employeeID + '\'' +
-                ", taskDescription='" + taskDescription + '\'' +
-                ", status='" + status + '\'' +
-                ", dueDate=" + dueDate +
-                '}';
+        return "Task Id : " + taskID + '\n' +
+                "Assigned to employee : " + employeeID + '\n' +
+                "Task Description : " + taskDescription + '\n' +
+                "Status : " + status + '\n' +
+                "Due Date : " + dueDate ;
     }
 
     private String generateID(){

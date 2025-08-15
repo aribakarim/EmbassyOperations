@@ -64,6 +64,7 @@ public class HRManagerDashboardController
             MyProfileViewController controller = fxmlLoader.getController();
             controller.setLoggedInOfficer(this.loggedInOfficer);
             controller.setDashboard(this);
+            controller.setProfileInfo(this.loggedInOfficer);
             hrManagerBP.setCenter(root);
         } catch (Exception e) {
             //
@@ -72,14 +73,46 @@ public class HRManagerDashboardController
 
     @javafx.fxml.FXML
     public void calendarButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("HRManager/CalendarView.fxml"));
+            Parent root = fxmlLoader.load();
+
+            CalendarViewController controller = fxmlLoader.getController();
+            controller.setDashboard(this);
+            hrManagerBP.setCenter(root);
+        }catch(Exception e){
+            //
+        }
     }
 
     @javafx.fxml.FXML
     public void staffActivityReportsButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("HRManager/ReportsView.fxml"));
+            Parent root = fxmlLoader.load();
+
+            ReportsViewController controller = fxmlLoader.getController();
+            controller.setLoggedInOfficer(this.loggedInOfficer);
+            controller.setDashboard(this);
+            hrManagerBP.setCenter(root);
+        }catch(Exception e){
+            //
+        }
     }
 
     @javafx.fxml.FXML
     public void leaveRequestsButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("HRManager/LeaveRequestsView.fxml"));
+            Parent root = fxmlLoader.load();
+
+            LeaveRequestsViewController controller = fxmlLoader.getController();
+            controller.setLoggedInOfficer(this.loggedInOfficer);
+            controller.setDashboard(this);
+            hrManagerBP.setCenter(root);
+        }catch(Exception e){
+            //
+        }
     }
 
     @javafx.fxml.FXML

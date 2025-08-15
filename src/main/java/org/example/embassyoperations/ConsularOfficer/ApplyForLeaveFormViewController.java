@@ -4,9 +4,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import org.example.embassyoperations.HRManager.HRManager;
 import org.example.embassyoperations.LoginViewController;
 import org.example.embassyoperations.User;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.time.LocalDate;
 
 public class ApplyForLeaveFormViewController
@@ -81,6 +85,12 @@ public class ApplyForLeaveFormViewController
             return;
         }
 
+        if (validation(this.loggedInOfficer)) {
+            alert.setContentText("You already have a pending request!");
+            alert.showAndWait();
+            return;
+        }
+
         LeaveRequest req = new LeaveRequest(loggedInOfficer.getId(),loggedInOfficer.getUsertype(),reasonTextArea.getText(),startDateDatePicker.getValue(),endDateDatePicker.getValue());
         LeaveRequest.writeLeaveRequest(req);
         Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
@@ -110,5 +120,23 @@ public class ApplyForLeaveFormViewController
                 //
             }
         }
+    }
+
+    private boolean validation(ConsularOfficer c){
+        boolean flag = false;
+        File f = new File("LeaveRequestInfo.bin");
+        try {
+            FileInputStream fis = new FileInputStream(f);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while(true){
+                LeaveRequest req = (LeaveRequest) ois.readObject();
+                if(req.getEmployeeId().equals(c.getId()) && req.getStatus().equals("Pending")){
+                    flag = true;
+                }
+            }
+        }catch(Exception e){
+            //
+        }
+        return flag;
     }
 }

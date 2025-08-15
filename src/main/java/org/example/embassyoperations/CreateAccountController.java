@@ -103,39 +103,31 @@ public class CreateAccountController
     }
 
     public void writeConsularOfficer(ConsularOfficer consularOfficer) {
-        File f = null;
+        File f = new File("ConsularOfficer.bin");
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
-
-        try {
-            f = new File("ConsularOfficer.bin");
-            if (f.exists()) {
-                fos = new FileOutputStream(f, true);
+        try{
+            if(f.exists()){
+                fos = new FileOutputStream(f,true);
                 oos = new AppendableObjectOutputStream(fos);
-            } else {
+            }
+            else{
                 fos = new FileOutputStream(f);
                 oos = new ObjectOutputStream(fos);
             }
             oos.writeObject(consularOfficer);
-        } catch (Exception e) {
-           //
-        } finally {
-            try {
-                if (oos != null) oos.close();
-                if (fos != null) fos.close();
-            } catch (Exception e) {
-                //
-            }
+            oos.close();
+        }catch(Exception e){
+            //
         }
     }
 
     public void writeHRManager(HRManager hrManager) {
-        File f = null;
+        File f = new File("HRManager.bin");
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
 
         try {
-            f = new File("HRManager.bin");
             if (f.exists()) {
                 fos = new FileOutputStream(f, true);
                 oos = new AppendableObjectOutputStream(fos);
@@ -144,15 +136,9 @@ public class CreateAccountController
                 oos = new ObjectOutputStream(fos);
             }
             oos.writeObject(hrManager);
+            oos.close();
         } catch (Exception e) {
             //
-        } finally {
-            try {
-                if (oos != null) oos.close();
-                if (fos != null) fos.close();
-            } catch (Exception e) {
-                //
-            }
         }
     }
 }
