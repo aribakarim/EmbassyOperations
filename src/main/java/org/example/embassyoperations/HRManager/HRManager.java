@@ -24,7 +24,7 @@ public class HRManager extends Employee implements Serializable {
     }
 
     //id is 5 digit
-    public String generateId(){
+     private String generateId(){
         Random r = new Random();
         int id = r.nextInt(10000, 99999);
         String str = Integer.toString(id);

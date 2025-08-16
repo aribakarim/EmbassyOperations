@@ -48,16 +48,16 @@ public class PassportApplicationsViewController {
         applicantIdCol.setCellValueFactory(new PropertyValueFactory<PassportApplication, String>("applicantId"));
         applicationIdCol.setCellValueFactory(new PropertyValueFactory<PassportApplication, String>("applicationId"));
 
-        PassportApplication p1 = new PassportApplication("Mrittika","1234","AG8148412","5566","Bangladeshi");
-        PassportApplication p2 = new PassportApplication("Orin","5678","AA0008412","6466","Bangladeshi");
-        PassportApplication p3 = new PassportApplication("Fateeha","4567","A0000000","4949","Bangladeshi");
-        PassportApplication p4 = new PassportApplication("Tashfia","8910","A03295451","2222","Bangladeshi");
-        PassportApplication p5 = new PassportApplication("Erika","1112","AG5168412","7878","Bangladeshi");
-        PassportApplication.writePassportApplicationInfo(p1);
-        PassportApplication.writePassportApplicationInfo(p2);
-        PassportApplication.writePassportApplicationInfo(p3);
-        PassportApplication.writePassportApplicationInfo(p4);
-        PassportApplication.writePassportApplicationInfo(p5);
+//        PassportApplication p1 = new PassportApplication("Mrittika","1234","AG8148412","5566","Bangladeshi");
+//        PassportApplication p2 = new PassportApplication("Orin","5678","AA0008412","6466","Bangladeshi");
+//        PassportApplication p3 = new PassportApplication("Fateeha","4567","A0000000","4949","Bangladeshi");
+//        PassportApplication p4 = new PassportApplication("Tashfia","8910","A03295451","2222","Bangladeshi");
+//        PassportApplication p5 = new PassportApplication("Erika","1112","AG5168412","7878","Bangladeshi");
+//        PassportApplication.writePassportApplicationInfo(p1);
+//        PassportApplication.writePassportApplicationInfo(p2);
+//        PassportApplication.writePassportApplicationInfo(p3);
+//        PassportApplication.writePassportApplicationInfo(p4);
+//        PassportApplication.writePassportApplicationInfo(p5);
     }
 
     @javafx.fxml.FXML

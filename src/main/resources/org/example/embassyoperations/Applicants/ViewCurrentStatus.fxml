@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.ViewCurrentStatusController">
+   <children>
+      <TextField fx:id="UseId" layoutX="14.0" layoutY="14.0" promptText="User ID" />
+      <TextField fx:id="Password" layoutX="225.0" layoutY="14.0" promptText="Password" />
+      <Button layoutX="429.0" layoutY="14.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+      <Button layoutX="511.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+      <Button layoutX="252.0" layoutY="83.0" mnemonicParsing="false" onAction="#MyApplication" text="My Application" />
+      <TableView layoutX="200.0" layoutY="157.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="199.20001220703125" text="Current Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

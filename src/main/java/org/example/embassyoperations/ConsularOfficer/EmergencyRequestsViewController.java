@@ -46,12 +46,12 @@ public class EmergencyRequestsViewController
         applicantIdCol.setCellValueFactory(new PropertyValueFactory<EmergencyRequest,String>("applicantId"));
         emergencyType.setCellValueFactory(new PropertyValueFactory<EmergencyRequest,String>("emergencyType"));
 
-        EmergencyRequest e1 = new EmergencyRequest("2311","Lost Passport","I can't find my passport.","AA0008412");
-        EmergencyRequest e2 = new EmergencyRequest("2412","Stolen Passport","My passport is stolen.","A03295451");
-        EmergencyRequest e3 = new EmergencyRequest("2533","Medical Emergency","I had a stroke.","AG5168412");
-        EmergencyRequest.writeEmergencyRequest(e1);
-        EmergencyRequest.writeEmergencyRequest(e2);
-        EmergencyRequest.writeEmergencyRequest(e3);
+//        EmergencyRequest e1 = new EmergencyRequest("2311","Lost Passport","I can't find my passport.","AA0008412");
+//        EmergencyRequest e2 = new EmergencyRequest("2412","Stolen Passport","My passport is stolen.","A03295451");
+//        EmergencyRequest e3 = new EmergencyRequest("2533","Medical Emergency","I had a stroke.","AG5168412");
+//        EmergencyRequest.writeEmergencyRequest(e1);
+//        EmergencyRequest.writeEmergencyRequest(e2);
+//        EmergencyRequest.writeEmergencyRequest(e3);
 
     }
 

@@ -16,6 +16,11 @@ public abstract class Employee extends User implements Serializable {
                 super.toString();
     }
 
+    @Override
+    String generateId() {
+        return "";
+    }
+
     public void applyForLeave(){
 
     }

@@ -1,6 +1,5 @@
 package org.example.embassyoperations;
 
-import org.example.embassyoperations.HRManager.HRManager;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -111,7 +110,7 @@ public abstract class User implements Serializable {
     }
 
 
-    public abstract String generateId();
+    abstract String generateId();
 
     public abstract User login(String id, String password);
 

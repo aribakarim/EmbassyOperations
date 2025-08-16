@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="735.0" scaleShape="false" style="-fx-background-color: white;" type="BorderPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CitizenDashboardController">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="735.0" scaleShape="false" style="-fx-background-color: white;" type="BorderPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.Citizen.CitizenDashboardController">
    <top>
       <MenuBar prefHeight="36.0" prefWidth="653.0" BorderPane.alignment="CENTER">
         <menus>

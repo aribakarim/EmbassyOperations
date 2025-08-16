@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.embassy_operations_simulation.Citizen.EmargencyAssistance"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="540.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.Citizen.EmargencyAssistanceController">
+   <children>
+      <VBox layoutX="86.0" layoutY="88.0" prefHeight="452.0" prefWidth="554.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="153.0" text="Full Name :" />
+            <TextField fx:id="nameField" />
+            <Label text="Passport Number :" />
+            <TextField fx:id="passportNumberField" />
+            <Label text="Type Of Emargency :" />
+            <ComboBox fx:id="emargencytypeCombo" onAction="#handelEmargencyType" prefHeight="25.0" prefWidth="209.0" />
+            <Label text="Contact Number :" />
+            <TextField fx:id="contactNumberField" />
+            <Label text="Details Of Emargency :" />
+            <TextArea fx:id="emargencyDetailsArea" prefHeight="158.0" prefWidth="554.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submitOnAction" prefHeight="25.0" prefWidth="130.0" text="Submit" />
+                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="166.0" text="Clear" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="217.0" layoutY="47.0" prefHeight="27.0" prefWidth="370.0" text="Emergency Assistance Request" />
+   </children>
 </AnchorPane>

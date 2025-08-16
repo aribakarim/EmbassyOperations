@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.ApproveOrRejectVisaController">
+   <children>
+      <TextField fx:id="ApplicantName" layoutX="14.0" layoutY="34.0" promptText="Applicant Name" />
+      <TextField fx:id="VisaType" layoutX="425.0" layoutY="34.0" promptText="Visa Type" />
+      <TextField fx:id="PassportNumber" layoutX="225.0" layoutY="34.0" promptText="Passport Number" />
+      <TableView layoutX="14.0" layoutY="135.0" prefHeight="251.0" prefWidth="506.0">
+        <columns>
+          <TableColumn prefWidth="97.5999755859375" text="Applicant Name" />
+          <TableColumn prefWidth="138.39996337890625" text="Passport Number" />
+            <TableColumn prefWidth="128.79998779296875" text="Visa Type" />
+            <TableColumn prefWidth="140.00006103515625" text="Application Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="524.0" layoutY="152.0" mnemonicParsing="false" onAction="#Approve" text="Approve" />
+      <Button layoutX="530.0" layoutY="187.0" mnemonicParsing="false" onAction="#Reject" text="Reject" />
+      <Button layoutX="534.0" layoutY="235.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+      <DatePicker fx:id="ApplicationDate" layoutX="14.0" layoutY="86.0" promptText="Application Date" />
+      <TextField fx:id="Nationality" layoutX="225.0" layoutY="86.0" promptText="Nationality" />
+      <TextField fx:id="TravelReason" layoutX="425.0" layoutY="86.0" promptText="Travel for Reason" />
+   </children>
+</AnchorPane>

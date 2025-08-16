@@ -11,5 +11,6 @@ module org.example.embassyoperations {
     opens org.example.embassyoperations.HRManager to javafx.fxml, javafx.base;
     opens org.example.embassyoperations.Citizen to javafx.fxml, javafx.base;
     opens org.example.embassyoperations.Visitor to javafx.fxml, javafx.base;
+    opens org.example.embassyoperations.VisaOfficer to javafx.fxml, javafx.base;
     exports org.example.embassyoperations;
 }

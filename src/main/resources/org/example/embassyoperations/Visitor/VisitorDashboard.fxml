@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane prefHeight="533.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.embassy_operations_simulation.Visitor.VisitorDashboard">
+<AnchorPane prefHeight="533.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.Visitor.VisitorDashboardController">
    <children>
       <VBox layoutX="120.0" layoutY="37.0" prefHeight="469.0" prefWidth="291.0">
          <children>

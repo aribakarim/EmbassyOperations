@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.embassy_operations_simulation.Visitor.UrgentProcessing"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="531.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.Visitor.UrgentProcessing">
+   <children>
+      <Label layoutX="217.0" layoutY="37.0" prefHeight="26.0" prefWidth="240.0" text="Urgent Visa Processing Request" />
+      <Label layoutX="51.0" layoutY="93.0" prefHeight="26.0" prefWidth="176.0" text="Visa Applicaion Number :" />
+      <TextField fx:id="applicationNumberField" layoutX="217.0" layoutY="94.0" prefHeight="25.0" prefWidth="233.0" promptText="Enter Your Visa Application Number" />
+      <TextArea fx:id="reasonArea" layoutX="39.0" layoutY="172.0" prefHeight="152.0" prefWidth="527.0" promptText="Explan Why urgent processing is required" />
+      <Label layoutX="51.0" layoutY="137.0" prefHeight="32.0" prefWidth="233.0" text="Reason For Urgent Processing :" />
+      <Label layoutX="51.0" layoutY="336.0" prefHeight="26.0" prefWidth="161.0" text="Supporting Documents :" />
+      <HBox layoutX="219.0" layoutY="336.0" prefHeight="39.0" prefWidth="368.0">
+         <children>
+            <Button fx:id="uploadDocButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="Upload Document" />
+            <Label fx:id="uploadDocLabel" prefHeight="24.0" prefWidth="210.0" text="No File Selected" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" text="Button" />
+      <Label layoutX="51.0" layoutY="385.0" prefHeight="17.0" prefWidth="142.0" text="Select Priority Level :" />
+      <ComboBox fx:id="priorityComboBox" layoutX="176.0" layoutY="381.0" prefWidth="150.0" />
+      <HBox layoutX="109.0" layoutY="429.0" prefHeight="32.0" prefWidth="478.0">
+         <children>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelOnAction" prefHeight="25.0" prefWidth="123.0" text="Cancel" />
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submitOnAction" prefHeight="25.0" prefWidth="138.0" text="Submit">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
 </AnchorPane>

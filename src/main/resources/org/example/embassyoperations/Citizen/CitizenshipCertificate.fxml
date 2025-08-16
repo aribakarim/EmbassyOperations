@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="499.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.embassy_operations_simulation.Citizen.CitizenshipCertificate">
+<AnchorPane prefHeight="499.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.embassyoperations.Citizen.CitizenshipCertificateController">
    <children>
       <VBox layoutX="150.0" layoutY="19.0" prefHeight="456.0" prefWidth="356.0">
          <children>

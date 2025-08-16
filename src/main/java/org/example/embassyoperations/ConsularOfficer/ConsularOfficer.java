@@ -22,7 +22,7 @@ public class ConsularOfficer extends Employee implements Serializable {
     }
 
     //id is 6 digit
-    public String generateId(){
+    private String generateId(){
         Random r = new Random();
         int id = r.nextInt(100000, 999999);
         String str = Integer.toString(id);
